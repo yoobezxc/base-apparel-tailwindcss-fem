@@ -18,17 +18,75 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
     </style>
-  </head>
-  <body class="font-['Josefin_Sans'] text-blue-600 font-light">
-    We're coming soon Hello fellow shoppers! We're currently building our new
-    fashion store. Add your email below to stay up-to-date with announcements
-    and our launch deals. Email Address
 
-    <!-- <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer> -->
+    <script defer src="main.js"></script>
+  </head>
+  <body
+    class="font-['Josefin_Sans'] text-xs font-light bg-gradient-to-b from-[#ffffff] to-[#fff5f5] min-h-screen grid place-items-center"
+  >
+    <div class="grid place-items-center gap-5 lg:flex lg:flex-row-reverse">
+      <div class="block w-36 px-6 pt-5 justify-self-start lg:hidden">
+        <img src="./images/logo.svg" alt="icon logo" />
+      </div>
+      <div>
+        <img
+          class="lg:hidden"
+          src="./images/hero-mobile.jpg"
+          alt="hero image mobile"
+        />
+
+        <img
+          class="hidden lg:block"
+          src="./images/hero-desktop.jpg"
+          alt="hero image dekstop"
+        />
+      </div>
+      <div class="flex flex-col gap-4 p-7 lg:gap-16 lg:w-4/5 lg:px-24 lg:py-14">
+        <div class="hidden lg:block">
+          <img src="./images/logo.svg" alt="icon logo" />
+        </div>
+        <div
+          class="flex flex-col justify-center items-center text-4xl uppercase tracking-[0.2em] lg:items-start"
+        >
+          <span class="text-[#ce9797]">We're</span>
+          <span class="font-semibold text-[#413a3a]">coming</span>
+          <span class="font-semibold text-[#413a3a]">soon</span>
+        </div>
+        <div class="pb-3">
+          <p
+            class="text-center text-sm text-[#ce9797] font-normal lg:text-start"
+          >
+            Hello fellow shoppers! We're currently building our new fashion
+            store. Add your email below to stay up-to-date with announcements
+            and our launch deals.
+          </p>
+        </div>
+        <div class="flex flex-col gap-5 items-center justify-between relative">
+          <input
+            id="email"
+            class="py-4 px-5 bg-transparent ring-[#ce9797] ring-1 rounded-full font-semibold placeholder:text-[#ce9797] text-[#413a3a] w-full focus:outline-none focus:ring-2 focus:ring-[#f96262] leading-none invalid:ring-[#f96262] invalid:outline-none invalid:ring-2"
+            type="email"
+            placeholder="Email Address"
+          />
+          <img
+            id="error-icon"
+            class="absolute lg:right-28 right-16 top-2 hidden"
+            src="./images/icon-error.svg"
+            alt="icon error"
+          />
+          <button
+            class="bg-gradient-to-b from-[#f8bfbf] to-[#ee8c8c] py-[14px] px-6 rounded-full absolute -right-1 -top-[1px] shadow-lg lg:px-10 hover:shadow-2xl hover:bg-gradient-to-b hover:from-[hsl(0,80%,90%)] hover:to-[#f2a6a6]"
+          >
+            <img src="./images/icon-arrow.svg" alt="icon arrow" />
+          </button>
+          <p
+            id="error-text"
+            class="self-start py-1 px-5 text-[#f96262] lg:text-base font-normal hidden"
+          >
+            Please provide a valid email
+          </p>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
